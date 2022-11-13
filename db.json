@@ -1,0 +1,59 @@
+{
+  "productList": [
+    {
+      "productName": "ajhgfd",
+      "companyName": "mayukh borana",
+      "price": "11/2/2022",
+      "favoriteFood": "Tacos",
+      "favoriteFruit": "Apple",
+      "comment": "qeewqedsds",
+      "id": 1
+    },
+    {
+      "productName": "Apple",
+      "companyName": "Shimla",
+      "price": "120",
+      "favoriteFood": "Pizza",
+      "favoriteFruit": "Apple",
+      "comment": "I love kashmiri apple.",
+      "id": 2
+    },
+    {
+      "productName": "Chicken",
+      "companyName": "Farms Chicken",
+      "price": "250",
+      "favoriteFood": "Tacos",
+      "favoriteFruit": "Dragonfruit",
+      "comment": "I love chicken Biryaani so much. ",
+      "id": 3
+    },
+    {
+      "productName": "Rice",
+      "companyName": "Basmatti",
+      "price": "120",
+      "favoriteFood": "Steak",
+      "favoriteFruit": "Orange",
+      "comment": "I eat rice special ocasions only.",
+      "id": 4
+    },
+    {
+      "productName": "Redmi",
+      "companyName": "Xiomi",
+      "price": "42000",
+      "favoriteFood": "Pizza",
+      "favoriteFruit": "Apple",
+      "comment": "I love mi phones.",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

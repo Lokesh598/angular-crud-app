@@ -1,0 +1,52 @@
+<h3 mat-dialog-title><b>Add product form</b></h3>
+<div mat-dialog-content>
+    <!-- need to bind form so we use form group -->
+    <!-- in formGroup name we have to give our product form name -->
+    <form [formGroup]="productForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input formControlName="productName" matInput [(ngModel)]="data.productName" placeholder="Placeholder">
+
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field><br>
+        <mat-form-field appearance="outline">
+            <mat-label>Company Name</mat-label>
+            <input formControlName="companyName" matInput placeholder="Placeholder">
+
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input formControlName="price" matInput placeholder="Placeholder">
+
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Favorite food</mat-label>
+            <mat-select formControlName="favoriteFood">
+                <mat-option *ngFor="let food of foods" [value]="food.viewValue">
+                    {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-radio-group>
+            <label id="example-radio-group-label">Pick your favorite fruit</label><br>
+            <mat-radio-group formControlName="favoriteFruit" aria-labelledby="example-radio-group-label"
+                class="example-radio-group">
+                <!-- [value] == used for bind the value -->
+                <mat-radio-button class="example-radio-button" *ngFor="let fruit of fruits" [value]="fruit.viewValue">
+                    {{fruit.viewValue}}
+                </mat-radio-button>
+            </mat-radio-group>
+
+        </mat-radio-group>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Leave a comment</mat-label>
+            <textarea formControlName="comment" matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button mat-dialog-close color="warn">Cancel</button>
+    <button mat-raised-button [disabled]="!productForm.valid" (click)="addProduct()" color="primary">Submit</button>
+</div>
