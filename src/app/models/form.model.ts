@@ -6,5 +6,8 @@ export interface FormData {
     price:number;
     favoriteFood: string;
     favoriteFruit:string;
+    // month:string;
+    // year:string;
+    date:string;
     comment: string;
 }

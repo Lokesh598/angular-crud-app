@@ -11,7 +11,8 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class HomePageComponent implements OnInit {
 
-  displayedColumns: string[] = ['productName', 'companyName', 'price', 'favoriteFood', 'favoriteFruit', 'comment'];
+  displayedColumns: string[] = ['productName', 'companyName', 'price', 'favoriteFood', 'favoriteFruit','date', 'comment'];
+  
   dataSource = new MatTableDataSource<any>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -24,12 +25,12 @@ export class HomePageComponent implements OnInit {
   getAllProducts(): void {
     this.productService.getProduct().subscribe ({
       next:(res)=>{
-        // console.log(res);
+        console.log(res);
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
       },
       error:(err)=>{
-        alert("Error while adding product")
+        //alert("Error while adding product")
       }
       
     })

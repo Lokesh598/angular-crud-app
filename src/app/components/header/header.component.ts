@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit {
   price!:number;
   favoriteFood!:string;
   favoriteFruit!:string;
+  month!:string;
+  year!:string;
+  date!:string;
   comment!:string;
 
   constructor(public dialog: MatDialog) { }
@@ -24,12 +27,15 @@ export class HeaderComponent implements OnInit {
     const dialogRef = this.dialog.open(FormDialogComponent, { 
     width: '500px',
     data: {
-      productName: this.productName, 
-      companyName: this.companyName,
-      price:this.price,
-      favoriteFood: this.favoriteFood,
-      favoriteFruit:this.favoriteFruit,
-      comment: this.comment
+      // productName: this.productName, 
+      // companyName: this.companyName,
+      // price:this.price,
+      // favoriteFood: this.favoriteFood,
+      // favoriteFruit:this.favoriteFruit,
+      // month:this.month,
+      // year:this.year,
+      // date:this.date,
+      // comment: this.comment
     },
     })
     dialogRef.afterClosed().subscribe(result => {

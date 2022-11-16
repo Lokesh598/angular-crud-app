@@ -29,6 +29,22 @@
                 </mat-option>
             </mat-select>
         </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Select Month</mat-label>
+            <mat-select formControlName="month">
+                <mat-option *ngFor="let date of dates" [value]="date.month">
+                    {{date.month}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Select Year</mat-label>
+            <mat-select formControlName="year">
+                <mat-option *ngFor="let date of dates" [value]="date.year">
+                    {{date.year}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
         <mat-radio-group>
             <label id="example-radio-group-label">Pick your favorite fruit</label><br>
             <mat-radio-group formControlName="favoriteFruit" aria-labelledby="example-radio-group-label"
